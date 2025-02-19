@@ -1,0 +1,20 @@
+[global]
+width = (200, 400)
+height = 400
+origin = top-right
+offset = 5x40
+scale = 0
+title = Dunst
+class = Dunst
+icon_corner_radius = 2
+transparency = 0
+padding = 6
+frame_width = 0
+gap_size = 2
+separator_color = auto
+font = JetBrainsMono nerd font 10
+format = <b>%a</b>\n%s\n%b
+min_icon_size = 64
+max_icon_size = 64
+background = "#06082Bcc"
+foreground = "#92d7e5"

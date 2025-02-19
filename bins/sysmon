@@ -1,0 +1,4 @@
+pkill conky
+conky -c /home/ak/conky/wmon &
+conky -c /home/ak/conky/clock &
+conky -c /home/ak/conky/sysmon &

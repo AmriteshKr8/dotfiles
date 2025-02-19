@@ -1,0 +1,76 @@
+conky.config = {
+    alignment = 'middle_right',
+    double_buffer = true,
+    gap_x = 30,
+    gap_y = -20,
+    override_utf8_locale = true,
+    update_interval = 0.50,
+    background = true,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_type = 'override',
+    own_window_class = 'conky',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    minimum_width = 200,
+    minimum_height = 5,
+    maximum_width = 300,
+    use_xft = true,
+    xftalpha = 0.5,
+    font = 'JetBrains Mono:size=9',
+    own_window_argb_value = 191,
+    own_window_colour = '000000',
+}
+
+conky.text = [[
+${font JetBrains Mono:size=12}${color #92d7e5}SYSTEM $hr${color }${font}
+$hr$
+
+${font JetBrains Mono:size=10}${color #e592d3}KERNEL:${color } ${color #92d7e5}${alignr}$kernel${color}
+${color #e592d3}ARCH: ${color } ${color #92d7e5}${alignr}$machine${color}
+${color #e592d3}UPTIME: ${color } ${color #92d7e5}${alignr}$uptime${font}${color}
+
+${font JetBrains Mono:size=12}${color #92d7e5}CPU USAGE $hr${color }${font}
+$hr$
+
+${color #92d7e5}CORE 1 ${alignr}${cpu cpu0}% ${color}
+${color #e592d3}${cpubar cpu0 10,300}${color}
+
+${color #92d7e5}CORE 2 ${alignr}${cpu cpu1}% ${color}
+${color #e592d3}${cpubar cpu1 10,300}${color}
+
+${color #92d7e5}CORE 3 ${alignr}${cpu cpu2}% ${color}
+${color #e592d3}${cpubar cpu2 10,300}${color}
+
+${color #92d7e5}CORE 4 ${alignr}${cpu cpu3}% ${color}
+${color #e592d3}${cpubar cpu3 10,300}${color}
+
+${font JetBrains Mono:size=12}${color #92d7e5}PROCESSES $hr${color }${font}
+$hr$
+${font JetBrains Mono:size=10}
+${color #e592d3}${top name 1}${alignr}${top cpu 1}%${color}
+${color #92d7e5}${top name 2}${alignr}${top cpu 2}%${color}
+${color #92d7e5}${top name 3}${alignr}${top cpu 3}%${color}
+${color #92d7e5}${top name 4}${alignr}${top cpu 4}%${color}
+${font}
+${font JetBrains Mono:size=12}${color #e592d3}MEMORY $hr${color }${font}
+$hr$
+
+${color #92d7e5}RAM ${alignr}$mem/$memmax${color}
+${color #e592d3}${membar 10,300}${color}
+
+${color #92d7e5}STORAGE ${alignr} $fs_used_perc%${color}
+${color #e592d3}${fs_bar 10,300}${color}
+
+${font JetBrains Mono:size=12}${color #92d7e5}NETWORK $hr${color }${font}
+$hr$
+
+${color #92d7e5}WLAN IP: ${color}$alignr${addr wlp2s0}
+
+${color #92d7e5}DOWN: ${color}${color #e592d3}${alignr}${downspeed wlp2s0}${color}
+${color #e592d3}${downspeedgraph wlp2s0 40,300}${color}
+
+${color #92d7e5}UP: ${color}${color #e592d3}${alignr}${upspeed wlp2s0}${color}
+${color #e592d3}${upspeedgraph wlp2s0 40,300}
+]]
+

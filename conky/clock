@@ -1,0 +1,42 @@
+conky.config = {
+    -- Window settings
+    alignment = 'top_middle',
+    gap_x = 0,
+    gap_y = 90,
+    minimum_width = 200,
+    minimum_height = 200,
+    border_inner_margin = 10,
+    border_outer_margin = 10,
+    border_width = 1,
+
+    -- Appearance settings
+    own_window = true,
+    own_window_type = 'override',  -- This type forces the window to be below others
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 50,
+    own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager',
+
+    -- Text settings
+    use_xft = true,
+    font = 'JetBrainsMono nerd font:size=20',
+    text_buffer_size = 2048,
+    override_utf8_locale = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    stippled_borders = 0,
+    default_color = 'white',
+    default_shade_color = 'black',
+    default_outline_color = 'black',
+
+    -- Update settings
+    double_buffer = true,
+    update_interval = 1,
+}
+
+conky.text = [[
+${font JetBrainsMono nerd font:size=50}${color #e592d3}${alignc}${time %I:%M }${color}${color #92d7e5}${time %p}${color}${font}
+${font JetBrainsMono nerd font:size=30}${alignc}${color #92d7e5}${time %B }${color}${color #92d7e5}${time %d}${color}${color #92d7e5}, ${time %Y}${color}${font}
+${font JetBrainsMono nerd font:size=40}${color #92d7e5}${alignc}${time %A}${color}${font}
+]]
