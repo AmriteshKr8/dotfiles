@@ -1,7 +1,11 @@
 change the username in i3-config and in the sysmon script.\
+\
 place the icons folder in ~/Pictures/\
+\
 copy everything in bins to /bin/ or /local/bin/\
+\
 copy all other folders to .config\
+\
 install jetbrains mono nerd font from here <a href="https://www.nerdfonts.com/font-downloads">Nerdfonts</a>\
 \
 install apps:
